@@ -20,7 +20,7 @@ export class NotificationController {
   ) {}
 
   @Post()
-  async send(@Body() body: CreateNotificationBody) {
+  async create(@Body() body: CreateNotificationBody) {
     const { recipientId, content, category } = body;
 
     const { notification } = await this.sendNotification.execute({
